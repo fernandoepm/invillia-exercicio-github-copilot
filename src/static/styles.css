@@ -7,31 +7,33 @@
 
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.8;
+  font-size: 18px;
   color: #333;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px;
   background-color: #f5f5f5;
 }
 
 header {
   text-align: center;
-  padding: 20px 0;
-  margin-bottom: 30px;
+  padding: 30px 0;
+  margin-bottom: 40px;
   background-color: #1a237e;
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 header h1 {
   margin-bottom: 10px;
+  font-size: 2.5rem;
 }
 
 main {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
   justify-content: center;
 }
 
@@ -43,35 +45,45 @@ main {
 
 section {
   background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   width: 100%;
   max-width: 500px;
 }
 
 section h3 {
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ddd;
   color: #1a237e;
 }
 
 .activity-card {
   margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .activity-card h4 {
   margin-bottom: 10px;
+  font-size: 1.5rem;
   color: #0066cc;
 }
 
 .activity-card p {
   margin-bottom: 8px;
+  font-size: 1rem;
 }
 
 .activity-card p strong {
@@ -100,16 +112,16 @@ section h3 {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 button {
   background-color: #1a237e;
   color: white;
   border: none;
-  padding: 10px 15px;
-  font-size: 16px;
-  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.2s;
 }
@@ -148,7 +160,72 @@ button:hover {
 
 footer {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 50px;
   padding: 20px;
-  color: #666;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+header.dark-mode {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+section.dark-mode {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.activity-card.dark-mode {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+button.dark-mode {
+  background-color: #444;
+  color: #e0e0e0;
+}
+
+button.dark-mode:hover {
+  background-color: #555;
+}
+
+message.dark-mode.success {
+  background-color: #2e7d32;
+  color: #e8f5e9;
+}
+
+message.dark-mode.error {
+  background-color: #c62828;
+  color: #ffebee;
+}
+
+message.dark-mode.info {
+  background-color: #0c5460;
+  color: #d1ecf1;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #3949ab;
 }
